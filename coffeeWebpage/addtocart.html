@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee</title>
+    <link rel="stylesheet" href="common/css/styless.css">
+    
+    <!--For Login-->
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <!--material icon-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./common/css/loginStyle.css" >     <!--googleFonts-->
+
+
+
+</head>
+
+<body>
+    <div class="containerr">
+        <div class="navbar">
+            <div class="logo"></div>
+            <!------ <h1>Coffee</h1>------>
+            <a href="./Home.html"> 
+                <img src="common/images/coffee_clique.png" width="120px">
+            </a>
+
+
+            <nav>
+                <ul>
+                    <li><a href="Home.html">Home</a> </li>
+                    <li><a href="product.html">Menu</a> </li>
+                    <li><a href="aboutus.html">About Us</a> </li>
+                    <li><a href="promotion.html">Promotion</a> </li>
+                    <li><a href="login.html">Login</a> </li>
+                    <li><a href="admin.html">Admin</a> </li>
+                    <li>
+                        <a href="addtocart.html"><img class="pt-1" src="common/images/shopping-cart.svg" width = "26px" ></a>
+                    </li>
+                </ul>
+
+            </nav>
+
+        </div>
+    </div>
+
+
+
+    <!------ cart items details ------>
+
+    <div class="small-container cart-page">
+        <table id = "first-coffee"> 
+            <tr>
+                <th>Product</th>
+                <th>Amount</th>
+                <th>Total</th>
+
+            </tr>
+
+            <!--product will be here-->
+
+        </table>
+
+
+
+        <div id="dvTotals" class="total-price">
+            <table>
+                <tr>
+                    <td>Total in Cart</td>
+                    <td id="tdTotalItem"> </td> </tr>
+                <tr>
+                    <td> Total price </td>
+                    <td id="tdTotalPrice"> </td>
+                </tr>
+                <tr align ="right"> 
+                    <td>
+                        <button type="button" id="btCheckout" class="btn">Checkout</button>
+                    </td>
+                </tr>
+
+
+            </table>
+        </div>
+
+    </div>
+
+    <div class="mdc-dialog" id = "loginDialog">
+        <div class="mdc-dialog__container">
+            <div class="mdc-dialog__surface"
+                 role="alertdialog"
+                 aria-modal="true"
+                 aria-labelledby="my-dialog-title"
+                 aria-describedby="my-dialog-content">
+
+                <div class="div-center">
+                    <div class="flex-ml-auto">
+
+                        <div class="p-5">
+
+                            <h2 style="text-align: center" class="font-roboto">Login</h2>
+                            <label class="mdc-text-field mdc-text-field--filled m-3">
+                                <span class="mdc-text-field__ripple"></span>
+                                <span class="mdc-floating-label" id="my-label-id">Email</span>
+                                <input class="mdc-text-field__input" type="text" aria-labelledby="my-label-id" id="tvEmail">
+                                <span class="mdc-line-ripple"></span>
+                            </label>
+
+                            <br/>
+
+                            <label class="mdc-text-field mdc-text-field--filled m-3">
+                                <span class="mdc-text-field__ripple"></span>
+                                <span class="mdc-floating-label" id="my-label-id">Password</span>
+                                <input class="mdc-text-field__input" type="password" aria-labelledby="my-label-id" id="tvPassword">
+                                <span class="mdc-line-ripple"></span>
+                            </label>
+                            <br/>
+
+                            <!--<div class="align-center">-->
+                            <!--<a class="font-roboto" href="#" style="font-size:16; color:#707070">Register</a>-->
+                            <!--</div>-->
+
+                            <div style="text-align:center; margin: 5%">
+                                <button class="mdc-button" onclick="onLogin()">
+                                    <span class="mdc-button__ripple"></span>
+                                    <i class="material-icons mdc-button__icon" aria-hidden="true">login</i>
+                                    <span class="mdc-button__label">LOGIN</span>
+                                </button>
+                                <button class="mdc-button" onclick="onLogout()">
+                                    <span class="mdc-button__ripple"></span>
+                                    <i class="material-icons mdc-button__icon" aria-hidden="true">logout</i>
+                                    <span class="mdc-button__label">CANCEL</span>
+                                </button>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <!--dialog-->
+                    <div class="mdc-dialog" id="alertDialog">
+                        <div class="mdc-dialog__container">
+                            <div class="mdc-dialog__surface"
+                                 role="alertdialog"
+                                 aria-modal="true"
+                                 aria-labelledby="my-dialog-title"
+                                 aria-describedby="my-dialog-content">
+                                <div class="mdc-dialog__content" id="my-dialog-content">
+                                    <p style="text-align:center"> Are you sure?</span></p>
+                                </div>
+                                <div class="mdc-dialog__actions">
+                                    <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="cancel">
+                                        <div class="mdc-button__ripple"></div>
+                                        <span class="mdc-button__label">No</span>
+                                    </button>
+                                    <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="discard">
+                                        <div class="mdc-button__ripple"></div>
+                                        <span class="mdc-button__label">Yes</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdc-dialog__scrim"></div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="mdc-dialog__scrim"></div>
+        </div>
+
+
+
+</body>
+
+<footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!--matrerial-->
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <!--jQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+        <!--firebase auth-->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+
+    <script src="./common/js/addtocart.js" ></script>
+</footer>
+
+
+</html>
+
+
+

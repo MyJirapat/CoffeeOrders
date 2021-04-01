@@ -1,0 +1,146 @@
+
+.font-roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.mdc-data-table{
+    border-collapse: collapse;
+    padding-top: 20px;
+    position: absolute;
+    right: 190px;
+    left:190px;
+    margin-top: 5%;
+}
+
+
+button[type=mdc-data-table__cell]{
+    width: 5%;
+    background-color: rgb(243, 82, 8);
+    color: rgb(252, 248, 248);
+    margin-top: 50px;
+    top: 2px;
+    padding: 8px 5px;
+    margin: 7px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type=button-delete]{
+   
+    left: -20%;
+    margin-top: 1%;
+    
+
+}
+
+.col{
+    color: #000;
+    font-weight: normal;
+
+}
+
+
+.button[type=button-Add]{
+   
+    
+    left: -60%
+    margin-top: 1%;
+    
+
+}
+
+.mdc-dialog{
+    position: relative;
+    
+
+}
+
+
+.
+
+
+
+
+/*.col h1{
+    
+    font-size: 20px;
+    line-height: 20px;
+    margin: 25px 0;
+    
+}*/
+
+/*.mdc-button__label{
+    left: 500px;
+}*/
+
+
+
+
+.mdc-data-table__header-cell{
+    
+    color: black;
+}
+
+
+
+
+.mdc-dialog__content{
+    width:50% ;
+    padding: 50px; ;
+    padding-top: 20px;
+    position: absolute
+}
+
+
+
+.m-1 {
+    margin: 1%
+}
+.m-2 {
+    margin: 2%
+}
+.m-3 {
+    margin: 3%
+}
+.m-4 {
+    margin: 4%
+}
+.m-5 {
+    margin: 5%
+}
+
+.p-1 {
+    padding: 1%;
+}
+.p-2 {
+    padding: 2%;
+}
+.p-3 {
+    padding: 3%;
+}
+.p-4 {
+    padding: 4%;
+}
+.p-5 {
+    padding: 5%;
+}
+
+.p-5 {
+    padding: 50px;
+    background-color: #f5f5f5
+    
+    
+    
+
+}
+
+
+:root {
+  --mdc-theme-primary: #9c27b0;
+  --mdc-theme-secondary: #ffab40;
+  --mdc-theme-background: #fff;
+}
+
+

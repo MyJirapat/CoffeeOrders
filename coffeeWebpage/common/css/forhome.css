@@ -1,0 +1,176 @@
+
+
+.headerr{
+    width:auto ;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(../images/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    position: relative;
+}
+
+
+
+
+
+
+body{
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+.navbar{
+    display: flex;
+    align-items: center;
+    width: auto;
+    padding: 15px;
+}
+
+nav{
+    flex: 1;
+    text-align: right;
+}
+
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+    
+
+}
+
+
+
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+    max-height: 20;
+}
+
+a{
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+}
+
+p{
+    color: #555;
+}
+.containerr{
+    padding-right: 5%;
+}
+
+.roww{
+
+    max-width: 1300px; 
+    margin: auto;
+    padding-left: 10%;
+  /*---  padding-left: 25px; --*/
+
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+ /*----   justify-content: space-around; ------*/
+
+}
+
+
+
+
+
+.col-22{
+    flex-basis: 50%;
+    min-width: 300px;
+    padding: 50px 0;
+    position: relative;
+    right: 20%;
+    transition: transform 0.5s;    
+}
+
+/*.col-2 img{
+    
+    max-width: 650px;
+    padding: 50px 0;
+    position: relative;
+    right: 20%;
+   
+  
+    
+    
+}*/
+
+.col-22 h1{
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+    color: #fff;
+    
+}
+
+
+
+.col-00{
+    flex-basis: 50%;
+    min-width: 300px;
+    position: relative;
+    right: 9%;
+    top: 150px;
+    
+    transition: transform 0.5s;    
+}
+
+.col-00 img{
+    
+    max-width: 650px;
+    padding: 50px 0;
+    position: relative;
+    padding-left: 20%;
+}
+
+.col-00 h1{
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+    
+}
+
+
+
+
+.btn{
+    display: inline-block;
+    background: #ff523b;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.5s;
+}
+
+
+.btn:hover{
+    background: #563456;
+}
+
+/*------- hearder background -------*/
+
+
+
+
+.headerr .roww{
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+
+   
+}
+
+
+
+
+

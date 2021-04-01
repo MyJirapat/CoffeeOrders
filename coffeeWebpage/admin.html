@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+
+    <head>
+        <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+        <!--material icon-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <!--fonts-->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="./common/css/adminStyle.css">
+        
+        <!--fonts-->
+    </head>
+
+    <body>
+
+
+        <td><div class="mdc-dialog__actions">
+            <button type="button-add" id="btAdd" class="mdc-button mdc-dialog__button">
+                <div class="mdc-button__ripple"></div>
+
+                <span class="mdc-button__label"scope="row" >Add</span>
+            </button>
+
+        
+        </td>
+
+        <div>
+            <div class="mdc-data-table">
+                <div class="mdc-data-table__table-container">
+                    <table class="mdc-data-table__table" aria-label="Dessert calories">
+
+
+
+                        
+
+                        <thead>  
+
+                        
+                            <tr class="mdc-data-table__header-row">
+
+
+                               
+                                <th class="mdc-data-table__header-cell" role="columnheader" scope="col"> <h3 >Product Name </h3> </th>
+                                <!--th class="mdc-data-table__header-cell mdc-data-table__header-cell--numeric" role="columnheader" scope="col">Description</th--->
+                                <th class="mdc-data-table__header-cell" role="columnheader" scope="col"> <h3 >Description</h3></th>
+
+                                <th class="mdc-data-table__header-cell" role="columnheader" scope="col"><h3 >Price</h3></th>
+                                <!--th class="mdc-data-table__header-cell mdc-data-table__header-cell--numeric" role="columnheader" scope="col">Price</th--->
+                                <th class="mdc-data-table__header-cell" role="columnheader" scope="col"> <h3 >Image</h3></th>
+                                
+
+                                
+                                
+
+                                
+                            </tr>
+
+                            
+                        </thead>
+
+
+
+
+                        <tbody class="mdc-data-table__content" id = "container-admin">
+                            <!--Item will be added here-->
+                        </tbody>
+
+
+
+                    </table>
+                </div>
+            </div> 
+
+        </div>
+
+
+
+        <!--Dialog-->
+        <div class="mdc-dialog">
+            <div class="mdc-dialog__container">
+                
+                <div class="mdc-dialog__surface"
+                     role="alertdialog"
+                     aria-modal="true"
+                     aria-labelledby="my-dialog-title"
+                     aria-describedby="my-dialog-content">
+
+
+                    <div class="Add-product">
+                    <div class="p-5">
+
+                        <h2 style="text-align: center" class="font-roboto">Add Product</h2>
+
+                    <form onsubmit="onSubmitNewCoffee()">
+
+                        <label class="mdc-text-field mdc-text-field--filled m-3" >
+                            <span class="mdc-text-field__ripple"></span>
+                            <span class="mdc-floating-label" id="my-label-id">Product Name </span>
+                            <input class="mdc-text-field__input" type="text" aria-labelledby="my-label-id" id="tvproduct">
+                            <span class="mdc-line-ripple"></span>
+                        </label>
+                    
+
+                        <br/>
+                       
+                        <label class="mdc-text-field mdc-text-field--filled m-3"required >
+                            <span class="mdc-text-field__ripple"></span>
+                            <span class="mdc-floating-label" id="my-label-id">Description</span>
+                            <input class="mdc-text-field__input" type="text" aria-labelledby="my-label-id" id="tvdes" >
+                            <span class="mdc-line-ripple"></span>
+                        </label>
+                    
+                        <br/>
+                      
+                        <label class="mdc-text-field mdc-text-field--filled m-3">
+                            <span class="mdc-text-field__ripple"></span>
+                            <span class="mdc-floating-label" id="my-label-id">Price</span>
+                            <input class="mdc-text-field__input" type="text" aria-labelledby="my-label-id" id="tvprice" >
+                            <span class="mdc-line-ripple"></span>
+                        </label>
+                    
+                        <br/>
+
+                        <!--<button class="mdc-button mdc-button--outlined" onclick="imgPick()" >-->
+                        <!--<span class="mdc-button__ripple"></span>-->
+                        <!--<span class="mdc-button__label">SELECT IMAGE</span>-->
+                        <!--</button><br/>-->
+
+                        <!--<input id="file-input" type="file" name="name" style="display: none;" required>-->
+                        <input type='file' />
+                        <br><img width = "50px" height="50px"id="myImg" src="" style="display: none; margin-left: 5%; margin-top: 5%">
+
+                        <div class="mdc-dialog__actions">
+                            <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="cancel">
+                                <div class="mdc-button__ripple"></div>
+
+                                <span class="mdc-button__label">Cancel</span>
+                            </button>
+
+                            <button type="button" class="mdc-button mdc-dialog__button" onclick="onAdd()"> <div class="mdc-button__ripple"> </div>
+                                <span class="mdc-button__label">ADD</span>
+                            </button>
+
+                        </div>
+
+                    </form>    
+
+                </div>
+            </div>
+            <div class="mdc-dialog__scrim"></div>
+        </div>
+
+    </body>
+
+    <footer>
+        <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+        <!--jQuery-->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+            <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+            <!--firebase auth-->
+            <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+
+            <script src="./common/js/admin.js" ></script>
+    </footer>
+
+</html>

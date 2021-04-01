@@ -1,0 +1,184 @@
+<!--<html lang="en">-->
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>Coffee</title>
+    
+    <!--boostrap md-->
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!--<link rel="preconnect" href="https://fonts.gstatic.com">-->
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="common/css/styless.css">
+
+
+</head>
+
+<body>
+    <div class="containerr">
+        <div class="navbar">
+            <div class="logo"></div>
+            <!------ <h1>Coffee</h1>------>
+            <a href="./Home.html"> 
+                <img src="common/images/coffee_clique.png" width="120px">
+            </a>
+
+            <nav>
+                <ul>
+                    <li><a class = "legend" href="Home.html">Home</a> </li>
+                    <li><a class = "legend" href="product.html">Menu</a> </li>
+                    <li><a class = "legend" href="aboutus.html">About Us</a> </li>
+                    <li><a class = "legend" href="promotion.html">Promotion</a> </li>
+                    <li><a class = "legend" href="login.html">Login</a> </li>
+                    <li><a class = "legend" href="admin.html">Promotion</a> </li>
+                    
+                    <li>
+                        <a id = "linkAddToCart" href="addtocart.html"><img class="pt-1" src="common/images/shopping-cart.svg" width = "26px" ></a>
+                    </li>
+                </ul>
+
+            </nav>
+
+        </div>
+    </div>
+
+
+    <!--- feature Menu ------>
+
+
+    <!--div class="small-container">
+        <h2 class= "title">   Menu  </h2>
+
+        <div class="row">
+        <div class="col-3">
+        <img src="images/benz-s-1.jpg">
+        <h4>Espresso  </h4>
+        <div class="rating">
+
+        <p>105 Baht</p>
+        <a href="#" class="btn"> Buy </a>
+
+
+        </div>
+        </div>
+        <div class="col-3">
+        <img src="images/benz-c-class.jpg">
+        <h4>Espresso Macchiato</h4>
+        <div class="rating">
+
+        <p>105 Baht</p>
+        <a href="#" class="btn"> Buy </a>
+
+        </div>
+        </div>
+
+        <div class="col-3">
+        <img src="images/benz-e-class.jpg">
+        <h4>Espresso Con Panna </h4>
+        <div class="rating">
+        <p>105 Baht</p>
+        <a href="#" class="btn"> Buy </a>
+
+        </div>
+
+        </div>
+
+
+
+        </div--------->
+
+
+        <!--- feature Menu ------>
+
+        <div class="small-container">
+            <!---h2>More Menu </h2----->
+
+            <div class="row row-2">
+                <h2> 
+                    <select>
+                        <option> All Menu  </option>
+                    </select>
+                </h2>
+
+
+                <select>
+                    <option> Default Sorting </option>
+                    <option> Sort by price </option>
+                </select>
+
+
+            </div>
+
+            <div class="row" id="coffeeContainer">
+                <!--Coffee List will be loaded here-->
+
+                <!-- <div class="page-btn span">
+                    <!--<span> 1 </span>-->
+                    <!--<span> 2 </span>-->
+                    <!--<span> 3 </span>-->
+                    <!--<span> 4 </span>-->
+                    <!---->
+                    <!--</div> -->
+
+            </div>
+
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Add to Cart?</h5>
+
+                            <button type="button-delete" class="close" id="btCloseModel" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+
+                        </div>
+                        <div class="modal-body">
+                            <ul style="list-style: none">
+                                <li>
+                                    <td><input type="number" value="1" id="npAmountPicker" min="1"></td>
+                                    <li>
+                            </ul>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" id = "btAddToCart">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+</body>
+
+<footer>
+
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <script src="common/js/product.js" ></script>
+
+    <!--material design snackbar-->
+    <!--boostrap material design-->
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+
+
+</footer>
+
+</html>

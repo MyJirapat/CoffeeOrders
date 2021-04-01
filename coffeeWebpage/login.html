@@ -1,0 +1,139 @@
+    <header>
+        <head>
+            <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+            <!--material icon-->
+            <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+            <link rel="stylesheet" href="./common/css/loginStyle.css" > <!--googleFonts--> <link rel="preconnect" href="https://fonts.gstatic.com">
+            <!--fonts-->
+            <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+        </head>
+
+    </header>
+
+    <body>
+
+        <div class="mdc-dialog" id = "loginDialog">
+            <div class="mdc-dialog__container">
+                <div class="mdc-dialog__surface"
+                     role="alertdialog"
+                     aria-modal="true"
+                     aria-labelledby="my-dialog-title"
+                     aria-describedby="my-dialog-content">
+
+
+                    <div class="div-center">
+                        <div class="flex-ml-auto">
+
+                            <div class="p-5">
+
+                                <h2 style="text-align: center" class="font-roboto">Login</h2>
+                                
+                                <label class="mdc-text-field mdc-text-field--filled m-3">
+                                    <span class="mdc-text-field__ripple"></span>
+                                    <span class="mdc-floating-label" id="my-label-id">Email</span>
+                                    <input class="mdc-text-field__input" type="text" aria-labelledby="my-label-id" id="tvEmail">
+                                    <span class="mdc-line-ripple"></span>
+                                </label>
+
+                                <br/>
+
+                                <label class="mdc-text-field mdc-text-field--filled m-3">
+                                    <span class="mdc-text-field__ripple"></span>
+                                    <span class="mdc-floating-label" id="my-label-id">Password</span>
+                                    <input class="mdc-text-field__input" type="password" aria-labelledby="my-label-id" id="tvPassword">
+                                    <span class="mdc-line-ripple"></span>
+                                </label>
+                                <br/>
+
+
+
+
+
+
+
+                                <!--<div class="align-center">-->
+                                <!--<a class="font-roboto" href="#" style="font-size:16; color:#707070">Register</a>-->
+                                <!--</div>-->
+
+                                <div style="text-align:center; margin: 5%">
+                                    <button class="mdc-button" onclick="onLogin()">
+                                        <span class="mdc-button__ripple"></span>
+                                        <i class="material-icons mdc-button__icon" aria-hidden="true">login</i>
+                                        <span class="mdc-button__label">LOGIN</span>
+                                    </button>
+
+                                    <button class="mdc-button" onclick="onLogout()">
+                                        <span class="mdc-button__ripple"></span>
+
+                                       <i class="material-icons mdc-button__icon" aria-hidden="true">logout</i>
+                                        <span class="mdc-button__label">LOGOUT</span>
+                                    </button>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+
+
+
+                        <!--dialog-->
+                        <div class="mdc-dialog" id="alertDialog">
+                            <div class="mdc-dialog__container">
+                                <div class="mdc-dialog__surface"
+                                     role="alertdialog"
+                                     aria-modal="true"
+                                     aria-labelledby="my-dialog-title"
+                                     aria-describedby="my-dialog-content">
+                                    <div class="mdc-dialog__content" id="my-dialog-content">
+                                        <p style="text-align:center"> Are you sure?</span></p>
+                                    </div>
+
+                                    
+                                    <div class="mdc-dialog__actions">
+                                        <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="cancel">
+
+                                            <div class="mdc-button__ripple"></div>
+                                            <span class="mdc-button__label">No</span>
+
+
+                                        </button>
+                                        <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="discard">
+                                            <div class="mdc-button__ripple"></div>
+                                            <span class="mdc-button__label">Yes</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mdc-dialog__scrim"></div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="mdc-dialog__scrim"></div>
+            </div>
+
+
+    </body>
+
+    <footer>
+
+        <!--matrerial-->
+        <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+        <!--jQuery-->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+            <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+            <!--firebase auth-->
+            <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+            <script src="./common/js/login.js" ></script>
+
+    </footer>
+
+    </html>

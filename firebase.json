@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "coffeeWebpage",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
